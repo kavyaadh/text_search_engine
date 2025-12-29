@@ -1,19 +1,13 @@
-import frequency
+import inverted
 
 
 def search(sword):
-    words1 = frequency.find_freq("f1_clean.txt")
-    words2 = frequency.find_freq("f2_clean.txt")
-    f1 = False
-    f2 = False
+    ind = inverted.load_index()
+    sword = sword.lower()
+    if sword not in ind:
+        print("Word not found.")
+        return
 
-    if sword in words1:
-        f1 = True
-
-    if sword in words2:
-        f2 = True
-
-    freq1 = words1.get(sword, 0)
-    freq2 = words2.get(sword, 0)
-
-    return f1, freq1, f2, freq2
+    print(f"\n{sword} found in:")
+    for filename, freq in ind[sword].items():
+        print(f"  {filename} → {freq} time(s)")

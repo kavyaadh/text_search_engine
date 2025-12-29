@@ -22,16 +22,7 @@ print("Search Engine 1.0")
 print("________________________________________________")
 while yes:
     sword = input("Enter the word:").lower()
-    found1, freq1, found2, freq2 = search.search(sword)
-
-    if found1:
-        print(f'Found in file 1 {freq1} times')
-    if found2:
-        print(f'Found in file 2 {freq2} times')
-
-    if not (found1) and not (found2):
-        print("Word doesn't exist.")
-
+    search.search(sword)
     print("________________________________________________")
 
     fans = int(input("Enter k for the top k frequent words to be found."))
