@@ -12,7 +12,7 @@ Top-K Frequent Words: Finds the top-k most frequent words in each file using a h
 
 Search Engine: Allows users to search for a word in multiple text files, displaying frequency per file.
 
-Optional Inverted Index: Maps each word to the files it appears in, providing faster lookup and scalability.
+Inverted Index: Maps each word to the files it appears in, providing faster lookup and scalability.
 
 Interactive CLI Interface: Users can repeatedly search for words and view top-k frequent words.
 
